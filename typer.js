@@ -27,7 +27,7 @@ let center = {
   x: canvas.width / 2,
   y: canvas.height / 2,
   radius: 40,
-  color: '#FF0000'
+  color: '#FFFFF'
   // base_image = new Image(),
   // base_image.src = 'play.png',
   // context.drawImage(base_image, 100, 100)
@@ -36,7 +36,7 @@ let center = {
 let letter = {
   font: '20px Arial',
   color: '#0095DD',
-  size: 30,
+  size: 10,
   highestSpeed: 1.6,
   lowestSpeed: 0.6,
   probability: 0.02
@@ -102,9 +102,27 @@ function draw () {
   window.requestAnimationFrame(draw);
 }
 
+// let thumbImg = document.createElement('img');
+// thumbImg.src = 'play.png';
 function drawCircle (c) {
+  
+  // // ctx.fillStyle = "#9dd4ff";
+  // ctx.beginPath();
+  // ctx.moveTo(232,213)
+  // ctx.lineTo(315,198);
+  // ctx.lineTo(x,y);
+
+
+  // ctx.drawImage(thumbImg, 0, 0, 50, 50);
+
+  // ctx.closePath();
+  // ctx.fill();
+
+
+
+  ctx.src = 'play.png';
   ctx.beginPath();
-  ctx.arc(c.x, c.y, c.radius, 0, 2 * Math.PI);
+  ctx.arc(c.x, c.y, c.radius, 0, 10 * Math.PI);
   ctx.fillStyle = c.color;
   ctx.fill();
   ctx.closePath();
