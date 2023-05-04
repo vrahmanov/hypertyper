@@ -6,10 +6,10 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const getTime = typeof performance === 'function' ? performance.now : Date.now;
-const FRAME_DURATION = 1000 / 58;
+const FRAME_DURATION = 2000 / 58;
 let then = getTime();
 let acc = 0;
-FPSMeter.theme.colorful.container.height = '40px';
+FPSMeter.theme.colorful.container.height = '30px';
 let meter = new FPSMeter({
   left: canvas.width - 130 + 'px',
   top: 'auto',
@@ -20,14 +20,17 @@ let meter = new FPSMeter({
 });
 
 let score = 0;
-let lives = 10;
-let caseSensitive = true;
+let lives = 5;
+let caseSensitive = false;
 
 let center = {
   x: canvas.width / 2,
   y: canvas.height / 2,
-  radius: 20,
+  radius: 40,
   color: '#FF0000'
+  // base_image = new Image(),
+  // base_image.src = 'play.png',
+  // context.drawImage(base_image, 100, 100)
 };
 
 let letter = {
